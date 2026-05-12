@@ -177,7 +177,7 @@ text-(--text) font-(--font-sans)">
 
                 if(input === "CE"){
                     setResult("");
-                    setOperation(operation.slice(0, -2));
+                    setOperation(operation.slice(0, -1));
                     return;
                 }
 
@@ -190,7 +190,7 @@ text-(--text) font-(--font-sans)">
 
                 if(result){
                     setOperation(isNaN(input) 
-                    ? `${result}${input === "," ? "" : " "}${input}`: input )
+                    ? `${result}${input}` : input)
                     setResult("");
                     return;
                 }
@@ -203,7 +203,7 @@ text-(--text) font-(--font-sans)">
                 
 
                 setOperation(
-                  `${operation}${operation.endsWith(',') ? "" : " "}${input}`
+                  `${operation}${input}`
                 );
             }
 
